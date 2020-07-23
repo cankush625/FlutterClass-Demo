@@ -32,6 +32,7 @@ Widget MyApp() {
 
   var materialApp = MaterialApp(
     home: myHome,
+    debugShowCheckedModeBanner: false,
   );
 
   return materialApp;
