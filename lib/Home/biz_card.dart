@@ -13,6 +13,7 @@ Widget BizCard() {
     actions: <Widget>[
       clickableUserProfilePicture,
     ],
+    backgroundColor: Colors.purple,
   );
   var profilePicture = Container(
     child: Padding(
@@ -111,6 +112,7 @@ Widget BizCard() {
   var bizCard = Scaffold(
     appBar: bizCardAppBar,
     body: bizCardContent,
+    backgroundColor: Colors.yellowAccent[100],
   );
   var materialApp = MaterialApp(
     home: bizCard,
