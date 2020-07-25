@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 Widget BizCard() {
   var userProfilePicture = Icon(Icons.account_circle);
@@ -88,6 +89,17 @@ Widget BizCard() {
       ],
     ),
   );
+  var viewMoreButton = Padding(
+    padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+    child: MaterialButton(
+      child: Text(
+        'View More',
+        style: bizCardTextStyle,
+      ),
+      color: Colors.orange[600],
+      onPressed: onViewMoreButtonPressed,
+    ),
+  );
   var bizCardContent = Center(
     child: Container(
       width: 330,
@@ -98,6 +110,7 @@ Widget BizCard() {
           myName,
           email,
           mySkills,
+          viewMoreButton,
         ],
       ),
       decoration: BoxDecoration(
@@ -122,4 +135,18 @@ Widget BizCard() {
 }
 
 void showUserProfile() {
+
+}
+
+void onViewMoreButtonPressed() {
+  print("View more button is pressed");
+  Fluttertoast.showToast(
+      msg: "View More Pressed",
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.yellowAccent[200],
+      textColor: Colors.grey[800],
+      fontSize: 16.0,
+  );
 }
