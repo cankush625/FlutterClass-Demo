@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterclass_demo/Home/biz_card.dart';
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
+import 'package:flutterclass_demo/Home/biz_card1.dart';
 
 void main() {
   runApp(BizApp());
