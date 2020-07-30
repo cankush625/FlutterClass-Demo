@@ -5,8 +5,8 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 class BizCard extends StatelessWidget {
   Widget build(BuildContext context) {
-    double width = window.physicalSize.width * 0.22;
-    double height = window.physicalSize.height * 0.08;
+    double width = 340;
+    double height = 230;
     var phoneIcon = Icon(Icons.phone);
     var mailIcon = Icon(Icons.email);
     var bizcardAppBar = AppBar(
@@ -104,6 +104,7 @@ class BizCard extends StatelessWidget {
     );
     Widget materialApp = MaterialApp(
       home: bizcardHome,
+      debugShowCheckedModeBanner: false,
     );
     return materialApp;
   }
