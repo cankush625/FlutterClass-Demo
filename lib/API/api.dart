@@ -59,7 +59,7 @@ class _ApiState extends State<Api> {
                     'Search'
                 ),
                 onPressed: () async {
-                  Response response = await http.get("http://api.openweathermap.org/data/2.5/forecast?q=$cityName&appid=111056e251e0e318eb8c40eea6540ff7&units=metric");
+                  Response response = await http.get("http://api.openweathermap.org/data/2.5/forecast?q=$cityName&appid=111056e251e0e&units=metric");
                   data = jsonDecode(response.body);
                   setState(() {
                     temperature = data["list"][1]["main"]["temp"];
